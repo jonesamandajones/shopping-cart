@@ -5,6 +5,7 @@ from src.schemas.user import UserSchema
 
 
 class Address(BaseModel):
+    id: str
     street: str
     cep: str
     district: str
@@ -14,5 +15,5 @@ class Address(BaseModel):
 
 
 class AddressSchema(BaseModel):
-    user: UserSchema
+    user_id: int
     address: List[Address] = []
